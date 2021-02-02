@@ -5,7 +5,7 @@
     <body>
         <h1>State search</h1>
         <?php 
-            include("states.php");
+            $states = "Mississippi Alabama Texas Massachussets Kansas";
             echo "<hr />";
 
             preg_match('/\b(\w*xas)\b/', $states, $match);
@@ -20,19 +20,7 @@
             preg_match('/\b(\w*a)\b/', $states, $match);
             $statesList[3] = $match[0];
 
-            list($a, $b, $c, $d) = $statesList;
-
-            echo "<h4>State ending with xas</h4>";
-            echo $a;
-
-            echo "<h4>State beginnig with k and ending with s</h4>";
-            echo $b;
-
-            echo "<h4>State beginning with M and ending with s</h4>";
-            echo $c;
-
-            echo "<h4>State ending with a</h4>";
-            echo $d;
+           print_r($statesList)
         ?>
     </body>
 </html>
